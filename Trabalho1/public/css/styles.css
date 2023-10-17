@@ -105,6 +105,10 @@ h1 {
   margin-left: 10px;
 }
 
+.export-user-button:hover {
+  background-color: #1b61ac;
+}
+
 .export-user-section {
   padding-top: 20px;
   padding-left: 5px;
