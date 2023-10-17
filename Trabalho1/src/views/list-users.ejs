@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <%- include('./components/head') %>
+  </head>
+  <body>
+    <h1>Isadora Brito</h1>
+
+    <%- include('./components/add-user-button') %>
+
+    <table class="users-list">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Tipo</th>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Telefone</th>
+          <th>CPF</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (let i = 0; i < users.length; i++) { %>
+        <tr>
+          <td><%= users[i].id %></td>
+          <td><%= users[i].role %></td>
+          <td><%= users[i].name %></td>
+          <td><%= users[i].emails.split(',')[0] %></td>
+          <td><%= users[i].phones.split(',')[0] %></td>
+          <td><%= users[i].cpf %></td>
+          <td>
+            <a href="/edit-users/<%= users[i].id %>"><button class="edit-button">Editar</button></a>
+            
+
+          <% if (users[i].role == 'cliente') { %>
+            <%- include('./components/modal', { userId: users[i].id }) %>
+          <% } %> 
+          </td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+
+    <%- include('./components/pagination') %>
+    <%- include('./components/export-csv') %>
+  </body>
+  <footer><%- include('./components/footer') %></footer>
+</html>

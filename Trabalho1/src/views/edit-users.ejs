@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <%- include('./components/head') %>
+  </head>
+  <body>
+    <h1>Editar Usuário</h1>
+
+    <section class="edit-form">
+      <form action="/edit-users/<%= user.id %>" method="POST">
+        <label for="name">Nome</label>
+        <input type="text" name="name" id="name" <% if (user.role === 'admin') {
+        %>readonly<% } %> value="<%= user.name %>" required />
+        <br />
+
+        <label for="cpf">Cpf</label>
+        <input type="text" name="cpf" id="cpf" <% if (user.role === 'admin') {
+        %>readonly<% } %> value="<%= user.cpf %>" required />
+
+        <br />
+
+        <label for="password">Senha</label>
+        <input type="password" name="password" id="password" <% if (user.role
+        === 'admin') { %>readonly<% } %> value="<%= user.password %>" required
+        />
+
+        <br />
+
+        <label for="phones">Telefone 1</label>
+        <input
+          type="text"
+          name="phones[0]"
+          id="phone1"
+          value="<%= user.phones.split(',')[0] %>"
+          required
+        />
+        <br />
+
+        <label for="phones">Telefone 2</label>
+        <input
+          type="text"
+          name="phones[1]"
+          id="phone2"
+          value="<%= user.phones.split(',')[1] %>"
+        />
+        <br />
+
+        <label for="phones">Telefone 3</label>
+        <input
+          type="text"
+          name="phones[2]"
+          id="phone3"
+          value="<%= user.phones.split(',')[2] %>"
+        />
+        <br />
+
+        <label for="emails">Email 1</label>
+        <input
+          type="text"
+          name="emails[0]"
+          id="email1"
+          value="<%= user.emails.split(',')[0] %>"
+          required
+        />
+        <br />
+
+        <label for="emails">Email 2</label>
+        <input
+          type="text"
+          name="emails[1]"
+          id="email2"
+          value="<%= user.emails.split(',')[1] %>"
+        />
+        <br />
+
+        <label for="emails">Email 3</label>
+        <input
+          type="text"
+          name="emails[2]"
+          id="email3"
+          value="<%= user.emails.split(',')[2] %>"
+        />
+        <br />
+
+        <input type="submit" value="Atualizar" />
+      </form>
+    </section>
+  </body>
+  <footer><%- include('./components/footer') %></footer>
+</html>

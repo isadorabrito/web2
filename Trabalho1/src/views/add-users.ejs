@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <%- include('./components/head') %>
+  </head>
+
+  <body>
+    <h1>Add User</h1>
+    <section class="add-form">
+      <form action="/add-users" method="POST">
+        <label for="name">Nome</label>
+        <input type="text" name="name" id="name" required />
+        <br />
+
+        <label for="cpf">Cpf</label>
+        <input type="text" name="cpf" id="cpf" required />
+        <br />
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required />
+        <br />
+
+        <label for="phone1">Contato</label>
+        <input type="text" name="phones[]" id="phone1" required />
+        <br />
+
+        <label for="phone2">Contato 2</label>
+        <input type="text" name="phones[]" id="phone2" />
+        <br />
+
+        <label for="phone3">Contato 3</label>
+        <input type="text" name="phones[]" id="phone3" />
+        <br />
+
+        <label for="email1">Email</label>
+        <input type="text" name="emails[]" id="email1" required />
+        <br />
+
+        <label for="email2">Email 2</label>
+        <input type="text" name="emails[]" id="email2" />
+        <br />
+
+        <label for="email3">Email 3</label>
+        <input type="text" name="emails[]" id="email3" />
+        <br />
+
+        <input type="submit" value="Cadastrar" />
+      </form>
+    </section>
+  </body>
+  <footer><%- include('./components/footer') %></footer>
+</html>
