@@ -1,0 +1,49 @@
+body {
+  font-family: Roboto, monospace;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+h1 {
+  text-align: start;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  list-style-type: disc;
+}
+
+.content {
+  display: flex;
+}
+
+.details {
+  flex: 1;
+  padding: 20px;
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 50px;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,31 @@
+body {
+  font-family: Roboto, monospace;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+h1 {
+  margin-top: 80px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #335e8b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: medium;
+}

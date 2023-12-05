@@ -1,0 +1,76 @@
+body {
+  font-family: Roboto, monospace;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.post-user-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.post-user-section .post-button {
+  padding: 15px 30px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.top-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.top-links a {
+  margin-right: 20px;
+  padding-right: 10px;
+}
+
+.photo-item {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-right: 20px;
+}
+
+.photos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 5px;
+  margin-left: 15px;
+}
+
+.button-group form {
+  flex: 1;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+.button-group form:last-child {
+  margin-right: 0;
+}
+
+a {
+  color: darkblue;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Printerest</title>
+    <link rel="stylesheet" href="/styles/cadastro.css" />
+  </head>
+  <body>
+    <section class="cadastro-form">
+      <h1>Cadastro</h1>
+      <form action="/cadastro" method="POST">
+        <label for="text">Usuario</label>
+        <input type="text" name="username" id="username" required />
+        <br />
+
+        <label for="text">Nome</label>
+        <input type="text" name="name" id="name" required />
+        <br />
+
+        <label for="text">Email</label>
+        <input type="text" name="email" id="email" required />
+        <br />
+
+        <label for="password">Senha</label>
+        <input type="password" name="password" id="password" required />
+        <br />
+
+        <input type="submit" value="Cadastrar" />
+        <h4>Já possui conta? Faça <a href="/">login</a></h4>
+      </form>
+      <% if (typeof error !== 'undefined' && error) { %>
+      <script>
+        alert("<%= error %>");
+      </script>
+      <% } %>
+    </section>
+  </body>
+</html>

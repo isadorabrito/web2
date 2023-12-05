@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Printerest</title>
+    <link rel="stylesheet" href="/styles/home.css" />
+  </head>
+  <body>
+    <div class="top-links">
+      <a href="/logout">Logout</a>
+      <a href="/perfil">Meu Perfil</a>
+    </div>
+
+    <section class="post-user-section">
+      <a href="/add-post">
+        <button class="post-button">Fazer uma nova postagem</button>
+      </a>
+    </section>
+
+    <div class="photos-container">
+      <% for (let i = photos.length - 1; i >= 0; i--) { %>
+      <div class="photo-item">
+        <img
+          src="/uploads/<%= photos[i].imageUrl %>"
+          width="150"
+          height="150"
+        />
+
+        <div class="button-group">
+          <form action="/image/<%= photos[i].id %>/" method="POST">
+            <input type="hidden" name="_method" value="POST" />
+            <button type="submit">Like</button>
+          </form>
+
+          <% if (photos[i].userId === user.id) { %>
+          <form action="/delete-photo/<%= photos[i].id %>/" method="POST">
+            <input type="hidden" name="_method" value="DELETE" />
+            <button type="submit">Excluir</button>
+          </form>
+          <% } %>
+        </div>
+        <a href="/image/<%= photos[i].id %>">Detalhes da Imagem</a>
+      </div>
+      <% } %>
+    </div>
+    <%- include('./components/pagination') %>
+  </body>
+</html>

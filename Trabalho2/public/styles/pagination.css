@@ -1,0 +1,32 @@
+body {
+  font-family: Roboto, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.pagination a,
+.pagination span {
+  padding: 5px 10px;
+  margin: 0 3px;
+  text-decoration: none;
+  color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 3px;
+}
+
+.pagination .disabled {
+  color: #999999;
+  border-color: #999999;
+  pointer-events: none;
+}

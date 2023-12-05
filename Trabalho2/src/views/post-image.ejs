@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printerest</title>
+    <link rel="stylesheet" href="/styles/post-image.css" />
+</head>
+<body>
+    <form action="/add-post" enctype="multipart/form-data" method="POST">
+        <div>titulo: <input type="text" name="title" /></div>
+        <div>descricao: <input type="text" name="description" /></div>
+        <div>
+          Imagem: <input type="file" name="imageUrl" required />
+        </div>
+        <div>tags (exemplo: tag1,tag2): <input type="text" name="tags" /></div>
+        <input type="submit" value="Upload" />
+      </form> 
+</html>
